@@ -1,0 +1,9 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/w3231dc5acy0/public_html/cgi-bin"
+PassengerBaseURI "/checkoutpage"
+PassengerPython "/home/w3231dc5acy0/virtualenv/public_html/cgi-bin/3.6/bin/python"
+PassengerAppLogFile "/home/w3231dc5acy0/helpme.log"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.craftuity.com/$1 [R,L]

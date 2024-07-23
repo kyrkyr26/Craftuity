@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4G4CJ7');</script>
+<!-- End Google Tag Manager -->
+    <title>
+        Mini Whale
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  margin:auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  position:relative;
+  margin:auto;
+  width:30vw;
+  height:25vw;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 1.0);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.column {
+  margin: auto;
+  width: 20%;
+  margin-bottom:15px;
+  margin-right:15px;
+}
+
+.ccontainer{
+    position:absolute;
+    left:0;
+    width:30%;
+}
+
+.mySlides img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.title{
+    margin:auto;
+    text-align:center;
+    font-size:2vw;
+}
+
+.description{
+    margin:auto;
+    text-align:center;
+    font-size:1vw;
+    margin-bottom:50px;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+.mybutton {
+            border: none;
+            outline: 0;
+            padding: 1em;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            height: auto;
+            margin:auto;
+            width: 10vw;
+            font-size: 0.5vw;
+            border:none;
+            border-radius: 10vw;
+        }
+        
+        .mybutton:hover {
+            opacity: 0.7;
+        }
+        
+        .buttonholder{
+            display: flex;
+            margin-bottom:100px;
+        }
+
+
+@media screen and (max-width: 600px) {
+  .container {
+    height:20vh;
+    }
+    
+    .title{
+        font-size:2vh;
+    }
+    
+    .description{
+        font-size:1.5vh;
+        width:80%;
+        margin-bottom:20px;
+    }
+    
+    .mySlides {
+        width:20vh;
+        height:20vh;
+    }
+    
+    .mySlides img {
+    width:100%;
+    height:20vh;
+    obejct-fit:cover;
+    display:block;
+    }
+    
+    .prev,
+    .next {
+        font-size: 1vh;
+        padding: 1em;
+        margin-top: -2.5vh;
+    }
+    
+    .mybutton {
+        width:20vh;
+        font-size: 1.5vh;
+        margin-top:0px;
+    }
+    
+}
+
+
+    </style>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4G4CJ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="banner">
+        <img class="bannerpic" src="/pics/flowerbanner2.jpg">
+        <div>CRAFTUITY</div>
+        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="/pics/32x32.jpg"></a>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="home.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </div>
+    
+    <div class="container">
+        <div class="ccontainer">
+        	<div class="column">
+          		<img class="demo cursor" src="/pics/turkey2.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    	    </div>
+    	    <div class="column">
+      		    <img class="demo cursor" src="/pics/turkey1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    	    </div>
+  	    </div>    
+        <div class="mySlides">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <img src="/pics/turkey2.jpg">
+        </div>
+
+        <div class="mySlides">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <img src="/pics/turkey1.jpg">
+        </div>
+    <div class="title">Turkey Napkin Holder</div>
+    <div class="description">$10</div>
+    <div class="description">For your napkins!</div>
+    <div class="buttonholder"><button class="mybutton" id="cham" onclick="addToCart('Turkey Napkin Holder', '10', '1', id, '/pics/turkey2.jpg')">Add to Cart</button></div>
+    
+    </div>
+    
+    
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+
+}
+    
+    function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+
+
+        function addToCart(name, price, quantity, id, image) {
+            btn = document.getElementById(id);
+
+            var cartItem = {
+                name: name,
+                price: price,
+                quantity: quantity,
+                image: image
+            };
+            var cartItemJSON = JSON.stringify(cartItem);
+
+            var cartArray = new Array();
+            // If javascript shopping cart session is not empty
+            if (sessionStorage.getItem('shopping-cart')) {
+                cartArray = JSON.parse(sessionStorage.getItem('shopping-cart'));
+            }
+            cartArray.push(cartItemJSON);
+
+            var cartJSON = JSON.stringify(cartArray);
+            sessionStorage.setItem('shopping-cart', cartJSON);
+
+            btn.textContent = "Added to Cart!"
+            setTimeout(changeBack, 2000, id)
+        }
+
+        function changeBack(id) {
+            btn.textContent = "Add to Cart";
+        }
+</script>
+</body>
+</html>

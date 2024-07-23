@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4G4CJ7');</script>
+<!-- End Google Tag Manager -->
+    <title>
+        Craftuity
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <style>
+        .text-right {
+            margin: auto;
+            text-align: center;
+            font-size: 2vw;
+            font-family: 'Just Another Hand';
+            font-weight: normal;
+            text-decoration: underline;
+        }
+        
+        .bottom-text-right {
+            margin: auto;
+            text-align: center;
+            font-size: 2vw;
+            font-family: 'Just Another Hand';
+        }
+
+        .items {
+            margin: auto;
+            text-align: center;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+            font-family: 'Just Another Hand';
+            font-size: 2vw;
+        }
+        
+        .items img {
+            height:200px;
+            width:200px;
+            object-fit:cover;
+        }
+
+        .txt-heading {
+            width:100%;
+            margin: auto;
+            font: 2vw 'Just Another Hand';
+            padding-top:5px;
+            
+        }
+
+        td {
+            border: 2px;
+            border-color: black;
+            outline: 2px;
+            font-size:1vw;
+            font: 'Just Another Hand';
+        }
+
+        section {
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin:auto;
+            height: auto;
+            border-radius: 6px;
+            justify-content: space-between;
+        }
+
+        .product {
+            display: flex;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .description {
+            display: flex;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.154px;
+            color: #242d60;
+            height: 100%;
+            width: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .icon {
+            border-radius: 6px;
+            margin: 10px;
+            width: 54px;
+            height: 57px;
+        }
+
+        h3,
+        h5 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            line-height: 20px;
+            letter-spacing: -0.154px;
+            color: #242d60;
+            margin: 0;
+        }
+
+        h5 {
+            opacity: 0.8;
+        }
+
+        .cbutton {
+            height: 2vw;
+            background: rgb(111, 9, 158);
+            color: white;
+            font-size: 1vw;
+            width: auto;
+            border: 0;
+            cursor: pointer;
+            letter-spacing: 0.6;
+            border-radius: 10px 10px 10px 10px;
+            text-align: center;
+            margin-bottom:200px;
+        }
+        
+        .emptybutton {
+            height: 2vw;
+            background: grey;
+            color: white;
+            font-size: 0.7vw;
+            width: 5%;
+            border: 0;
+            cursor: pointer;
+            margin:auto;
+            margin-top:10px;
+            letter-spacing: 0.6;
+            border-radius: 20px 20px 20px 20px;
+            text-align: center;
+            opacity:0.8;
+        }
+
+        .cbutton:hover {
+            opacity: 0.8;
+        }
+        
+        .heading {
+            margin:auto;
+            width: 100%;
+            text-align:center;
+            align-items:center;
+            font: 'Just Another Hand';
+        }
+
+        form {
+            margin: auto;
+            width: 80%;
+        }
+
+        .centerit
+        {
+            margin: auto;
+            align-items: center;
+            text-align:center;
+        }
+        
+        table{
+            max-width: 70%;
+            margin:auto;
+            font: 'Just Another Hand';
+        }
+        
+        @media screen and (min-width: 800px) {
+            .product{
+                margin:auto;
+            }
+            
+            section{
+                width:50%;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            .txt-heading{
+                font-size:3vh;
+            }
+            
+            .cbutton{
+                font-size:2vh;
+                height: 3vh;
+                background: rgb(111, 9, 158);
+                color: white;
+                width: 60%;
+                margin:auto;
+                border: 0;
+                cursor: pointer;
+                letter-spacing: 0.6;
+                border-radius: 6px 6px 6px 6px;
+                text-align: center;
+            }
+            
+            .emptybutton{
+                font-size:1.5vh;
+                height: 3vh;
+                width: 20%;
+                letter-spacing: 0.6;
+                border-radius: 20px 20px 20px 20px;
+                text-align: center;
+                opacity:0.8;
+            }
+            
+            .items {
+                margin: auto;
+                text-align: center;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+                font-size: 2vh;
+            }
+            
+            .items img {
+                height:100px;
+                width:100px;
+                object-fit:cover;
+            }
+            
+            table{
+                max-width: 90%;
+            }
+            
+            td{
+                font-size:1.5vh;
+            }
+            
+            .text-right {
+                margin: auto;
+                text-align: center;
+                font-size: 3vh;
+            }
+            
+            .bottom-text-right {
+                margin: auto;
+                text-align: center;
+                font-size: 3vh;
+            }
+            
+            form {
+                margin: auto;
+                width: 80%;
+            }
+            
+            .description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: auto;
+                width: 100%;
+            }
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4G4CJ7"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="banner" id="banner">
+        <img class="bannerpic" src="/pics/flowerbanner2.jpg">
+        <div>CRAFTUITY</div>
+        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="/pics/32x32.jpg"></a>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </div>
+    
+    <div style="text-align:center; margin: auto;">
+        <button class="emptybutton" onclick="emptyCart()">empty cart</button>
+    </div>
+
+    <div class="heading">
+        <div id="shopping-cart">
+            <div>
+                <h1 class="txt-heading">Shopping Cart:</h1>
+            </div>
+            <table id="ctable" class="ctable" cellpadding="5" cellspacing="1">
+                <thead>
+                    <tr>
+                        <th class='text-right' width="40%">Name</th>
+                        <th class='text-right' width="25%">Unit Price</th>
+                        <th class='text-right' width="10%">Quantity</th>
+                        <th class='text-right' width="25%">Sub Total</th>
+                    </tr>
+                </thead>
+                <!--  Cart table to load data on "add to cart" action -->
+                <tbody id="cartTableBody">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="bottom-text-right">Total:</td>
+                        <td></td>
+                        <td id="itemCount" class="bottom-text-right"></td>
+                        <td id="totalAmount" class="bottom-text-right"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <section id="container" style="background-color:rgb(228, 205, 250)">
+        <div id="panel" class="product">
+            <div class="description">
+                <form id="checkout_form" action="/checkoutpage" method="POST">
+                    
+                        <input id="allitems" type="hidden" name="allitems">
+                        <input id="allPrices" type="hidden" name="allPrices">
+                    <div class="centerit">
+                        <button class="cbutton">Checkout</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        showCartTable();
+        updateCart();
+        function updateCart(){
+            var cartitemnumber = document.getElementById("cartnumber");
+            var sessionnum = 0;
+            if (sessionStorage.getItem('cart-item-number') && Number(sessionStorage.getItem('cart-item-number')) != 0){
+                sessionnum = sessionStorage.getItem('cart-item-number');
+                cartitemnumber.textContent = sessionnum;
+                cartitemnumber.style.opacity = 1;
+            }
+            else{
+                cartitemnumber.textContent = 0;
+                cartitemnumber.style.opacity = 0;
+            }
+        }
+        var allitems = sessionStorage.getItem('allItems');
+        var allPrices = sessionStorage.getItem('allPrices');
+        document.getElementById('allitems').value = allitems;
+        document.getElementById('allPrices').value = allPrices;
+        
+
+        function showCartTable() {
+            var cartRowHTML = "";
+            var itemCount = 0;
+            var grandTotal = 0;
+
+            var price = 0;
+            var name = "";
+            var quantity = 0;
+            var subTotal = 0;
+            var allItems = "";
+            var allPrices = "";
+
+            if (sessionStorage.getItem('shopping-cart')) {
+                var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
+                itemCount = shoppingCart.length;
+                console.log(itemCount);
+
+                //Iterate javascript shopping cart array
+                shoppingCart.forEach(function (item, index) {
+                    var cartItem = JSON.parse(item);
+                    name = cartItem.name;
+                    image = cartItem.name;
+                    if (index == 0) {
+                        allItems += name;
+                    }
+                    else {
+                        allItems += (", " + name);
+                    }
+
+                    price = parseFloat(cartItem.price);
+                    if (index == 0){
+                        allPrices += cartItem.price;
+                    }
+                    else{
+                        allPrices+= (", " + cartItem.price);
+                    }
+                    quantity = parseInt(cartItem.quantity);
+                    console.log(name, image, price, quantity);
+                    subTotal = price * quantity
+
+                    cartRowHTML += "<tr>" +
+                        "<td class='items' style='display:flex;align-items:center;'><div><img src=" + cartItem.image +
+                        "></div><div style='width=100%;padding-left:10px'>" + cartItem.name + "</div></td>" +
+                        "<td class='items'>$" + price.toFixed(2) + "</td>" +
+                        "<td class='items'>" + quantity + "</td>" +
+                        "<td class='items'>$" + subTotal.toFixed(2) + "</td>" +
+                        "</tr>";
+
+                    grandTotal += subTotal;
+
+                });
+            }
+
+            $('#cartTableBody').html(cartRowHTML);
+            $('#itemCount').text(itemCount);
+            $('#totalAmount').text("$" + grandTotal.toFixed(2));
+            sessionStorage.setItem('allItems', allItems);
+            sessionStorage.setItem('allPrices', allPrices);
+        }
+
+        function emptyCart() {
+            if (sessionStorage.getItem('shopping-cart')) {
+                // Clear JavaScript sessionStorage by index
+                sessionStorage.removeItem('shopping-cart');
+                if (sessionStorage.getItem('cart-item-number')){
+                    sessionStorage.setItem('cart-item-number', 0)
+                }
+                showCartTable();
+                updateCart();
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

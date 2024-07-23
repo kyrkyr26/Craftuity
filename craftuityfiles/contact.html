@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4G4CJ7');</script>
+<!-- End Google Tag Manager -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>
+        Contact
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .mylabel {
+            width: 100%;
+            margin:auto;
+            text-align:center;
+            font-family:'Alexandria';
+            color:rgb(111, 9, 158);
+        }
+        
+        input, select, textarea {
+            width: 40%;
+            padding: 12px 20px;
+            margin: auto;
+            margin-bottom:15px;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            box-sizing: border-box;
+            font-family:'Alexandria';
+        }
+        
+        button {
+            width: 40%;
+            background-color: rgb(199, 70, 199);
+            color: white;
+            padding: 14px 20px;
+            margin: auto;
+            margin-top: 15px;
+            display: block;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family:'Alexandria';
+        }
+
+        input[type=submit] {
+            width: 40%;
+            background-color: rgb(199, 70, 199);
+            color: white;
+            padding: 14px 20px;
+            margin: auto;
+            margin-top: 15px;
+            display: block;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family:'Alexandria';
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(111, 9, 158);
+        }
+
+        div.container {
+            border-radius: 5px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            input, select, textarea {
+                width: 80%;
+            } 
+        }
+        
+
+    </style>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4G4CJ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="banner" id="banner">
+        <img class="bannerpic" src="/pics/flowerbanner2.jpg">
+        <div>CRAFTUITY</div>
+        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="/pics/32x32.jpg"></a>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="about.html">About</a>
+    </div>
+    <br>
+    <div class="myform">
+        <form action="/sendmemail.php" method="POST" id="myform">
+            <div class="mylabel">
+                <label for="fname">Your Name</label></div>
+            <input type="text" id="fname" name="firstname" placeholder="Your name">
+            
+            <div class="mylabel">
+                <label for="youremail">Your Email</label></div>
+            <input type="text" id="youremail" name="youremail" placeholder="Your email">
+        
+            <div class="mylabel">
+                <label for="subject">Subject</label></div>
+            <textarea id="subject" name="subject" placeholder="Your message.." style="height:200px"></textarea>
+        
+        </form>
+        <button id="mybutton">Submit</button>
+    </div>
+
+    <script>
+        updateCart();
+        function updateCart(){
+            var cartitemnumber = document.getElementById("cartnumber");
+            var sessionnum = 0;
+            if (sessionStorage.getItem('cart-item-number') && Number(sessionStorage.getItem('cart-item-number')) != 0){
+                sessionnum = sessionStorage.getItem('cart-item-number');
+                cartitemnumber.textContent = sessionnum;
+                cartitemnumber.style.opacity = 1;
+            }
+            else{
+                cartitemnumber.textContent = 0;
+                cartitemnumber.style.opacity = 0;
+            }
+        }
+        
+        $(document).ready(function(){
+            $("#myform").submit(function(){
+            });
+            $("button").click(function(){
+                var sending = document.getElementById("mybutton");
+                sending.textContent = "Submitting...";
+                $("#myform").submit();
+            });  
+        });
+    </script>
+
+</body>
+
+</html>

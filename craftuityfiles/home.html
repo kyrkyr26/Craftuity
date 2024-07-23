@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4G4CJ7');</script>
+<!-- End Google Tag Manager -->
+
+    <title>
+        Craftuity
+    </title>
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .mySlides {
+            display: none;
+            margin: auto;
+        }
+
+        .mySlides img {
+            height:25vw;
+            
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            margin: auto;
+            text-align: center;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 0.5vw;
+            width: 0.5vw;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: rgb(199, 83, 180);
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 5s;
+        }
+        
+        .star-five {
+            margin: 0.5vw 0;
+            position: relative;
+            display: block;
+            color: yellow;
+            width: 0px;
+            height: 2px;
+            border-right: 20px solid transparent;
+            border-bottom: 14px solid rgb(199, 83, 180);
+            border-left: 20px solid transparent;
+            transform: rotate(35deg);
+        }
+        .star-five:before {
+            border-bottom: 16px solid rgb(199, 83, 180);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -8px;
+            left: -12px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+        .star-five:after {
+            position: absolute;
+            display: block;
+            color: rgb(199, 83, 180);
+            top: 2px;
+            left: -20px;
+            width: 0px;
+            height: 0px;
+            border-right: 20px solid transparent;
+            border-bottom: 14px solid rgb(199, 83, 180);
+            border-left: 20px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+        }
+        
+        .review
+        {
+            color:rgb(125, 140, 125);
+            width:100%;
+            margin: auto;
+            font-family:'Alexandria';
+            text-align: center;
+            font-size:1vw;
+        }
+
+
+        @keyframes fade {
+            from {
+                opacity: 0
+            }
+
+            30% {
+                opacity: 1
+            }
+
+            70% {
+                opacity: 1
+            }
+
+            to {
+                opacity: 0
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .review{
+                font-size:2vh;
+            }
+            
+            .mySlides img {
+                height:30vh;
+                
+            }
+            
+            .dot {
+                height: 1vh;
+                width: 1vh;
+                margin-top:0;
+            }
+            
+            .star-five {
+            margin: 1vh 0;
+            position: relative;
+            display: block;
+            color: yellow;
+            width: 0px;
+            height: 1px;
+            border-right: 10px solid transparent;
+            border-bottom: 7px solid rgb(199, 83, 180);
+            border-left: 10px solid transparent;
+            transform: rotate(35deg);
+        }
+        .star-five:before {
+            border-bottom: 8px solid rgb(199, 83, 180);
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -4px;
+            left: -6px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+        .star-five:after {
+            position: absolute;
+            display: block;
+            color: rgb(199, 83, 180);
+            top: 1px;
+            left: -10px;
+            width: 0px;
+            height: 0px;
+            border-right: 10px solid transparent;
+            border-bottom: 7px solid rgb(199, 83, 180);
+            border-left: 10px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+        }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4G4CJ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="banner" id="banner">
+        <img class="bannerpic" src="/pics/flowerbanner2.jpg">
+        <div>CRAFTUITY</div>
+        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="/pics/32x32.jpg"></a>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <a href="home.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="slideshow-container">
+        <br>
+        <div class="mySlides fade">
+            <img src="/bigpics/ghost.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/bigpics/drinktuity.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/bigpics/Mushroom_Camping.jpg">
+        </div>
+
+    </div>
+
+    <br>
+
+    <div style="text-align:center;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    
+    <br><br>
+    
+    <div class="review">
+        Reviews: <br>
+        Angel: Drinktuity
+        <div style="display:flex;align-items: center;justify-content: center;">
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        </div>
+        I bought this for my college son's graduation. He loves it. The board is actually a pad which makes for an easier cleanup if spilled. 
+        Just wipe clean and air dry. The shot glasses fit nicely in the pieces which also makes it for easy cleanup. We had issues with USPS 
+        delivering the product and the shop owner helped me get the product in time for graduation. It was hectic but nothing to do with the shop. 
+        I would definitely recommend.
+        <br><br>
+        
+        Ray: Polymer Clay Keycap
+        <div style="display:flex;align-items: center;justify-content: center;">
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        </div>
+        <br>
+        
+        Sarah: Glen the Ghost
+        <div style="display:flex;align-items: center;justify-content: center;">
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        <span class="star-five"></span>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <br>
+        <div style="padding-left:5px;">
+            craftuitycrafts@gmail.com
+        </div>
+        <div style="padding-left:5px;">
+            instagram: @Craftuity
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        updateCart();
+        function updateCart(){
+            var cartitemnumber = document.getElementById("cartnumber");
+            var sessionnum = 0;
+            if (sessionStorage.getItem('cart-item-number') && Number(sessionStorage.getItem('cart-item-number')) != 0){
+                sessionnum = sessionStorage.getItem('cart-item-number');
+                cartitemnumber.textContent = sessionnum;
+                cartitemnumber.style.opacity = 1;
+            }
+            else{
+                cartitemnumber.textContent = 0;
+                cartitemnumber.style.opacity = 0;
+            }
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>

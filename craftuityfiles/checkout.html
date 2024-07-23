@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4G4CJ7');</script>
+<!-- End Google Tag Manager -->
+    <title>Checkout</title>
+    <link rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #650868;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                'Helvetica Neue', 'Ubuntu', sans-serif;
+            height: 100vh;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        section {
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 112px;
+            border-radius: 6px;
+            justify-content: space-between;
+        }
+
+        .product {
+            display: flex;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            width: 100%;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.154px;
+            color: #242d60;
+            height: 100%;
+            width: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        img {
+            border-radius: 6px;
+            margin: 10px;
+            width: 54px;
+            height: 57px;
+        }
+
+        h3,
+        h5 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            line-height: 20px;
+            letter-spacing: -0.154px;
+            color: #242d60;
+            margin: 0;
+        }
+
+        h5 {
+            opacity: 0.8;
+        }
+
+        button {
+            height: 36px;
+            background: black;
+            color: white;
+            font-size: 14px;
+            width: 100%;
+            border: 0;
+            font-weight: 500;
+            cursor: pointer;
+            letter-spacing: 0.6;
+            border-radius: 6px 6px 6px 6px;
+            transition: all 0.2s ease;
+            box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+            text-align: center;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        form {
+            margin: auto;
+            width: 80%;
+        }
+
+        .centerit
+        {
+            margin: auto;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+
+<body id="main">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4G4CJ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <section id="container">
+        <div id="panel" class="product">
+            <img src="/pics/iconC.png" alt="Order Total" />
+            <div class="description">
+                <form id="checkout_form" action="/checkoutpage" method="POST">
+                    <div class="centerit">
+                        <h3>Order Total</h3>
+                        <h5 id="myTotal"></h5>
+                        <input id="pricetotal" type="hidden" name="amount">
+                        <input id="allitems" type="hidden" name="allitems">
+                        <button class="button">Checkout</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script charset="utf-8">
+        var hi = parseFloat(sessionStorage.getItem('grandTotal'));
+        var allitems = sessionStorage.getItem('allItems');
+        console.log(hi)
+        $('#myTotal').text("$" + hi);
+        $('#myTotal').val("$" + hi);
+        document.getElementById('pricetotal').value = hi;
+        document.getElementById('allitems').value = allitems;
+
+    </script>
+</body>
+
+
+
+</html>

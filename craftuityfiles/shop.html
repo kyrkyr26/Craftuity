@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4G4CJ7');</script>
+<!-- End Google Tag Manager -->
+    <title>
+        Shop
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 14%;
+            height: 50%;
+            margin: auto;
+            margin-top: 3vw;
+            text-align: center;
+            display: block;
+            font-family: arial;
+            position: relative;
+            padding: 3vw;
+        }
+
+        .price {
+            color: grey;
+            font-size: 1vw;
+            font-family:'Alexandria';
+        }
+
+        .card .mybutton {
+            border: none;
+            outline: 0;
+            padding: 1em;
+            color: white;
+            font-family:'Alexandria';
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            height: auto;
+            width: 10vw;
+            font-size: 0.5vw;
+            border:none;
+            border-radius: 10vw;
+        }
+
+        h1 {
+            font-size: 1vw;
+            font-family:'Alexandria';
+        }
+
+        .card .mybutton:hover {
+            opacity: 0.7;
+        }
+
+        .row {
+            text-align: center;
+        }
+
+
+        .column {
+            padding: 5px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        .card img {
+            height: 10vw;
+            width: 20vh;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card .buynow {
+            opacity: 0;
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 70%;
+            transform: translate(-50%, 0%);
+            -ms-transform: translate(-50%, 0%);
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .card .buynow:hover {
+            opacity: 0;
+        }
+
+        .squarebutton {
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1vw;
+            width: 8vw;
+            background-color: #8716d9;
+            margin: auto;
+            border-radius: 10vw;
+            font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+        }
+
+        .actualbutton {
+            color: white;
+            background-color: #8716d9;
+            padding-top: 1vw;
+            padding-bottom:1vw;
+            text-align: center;
+            cursor: pointer;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            font-size: 1vw;
+        }
+        
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: rgb(199, 70, 199);
+            color: white;
+            padding: 16px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius:25px;
+        }
+        
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: rgb(111, 9, 158);
+        }
+        
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 98%;
+            text-align: right;
+            font-family:'Alexandria';
+        }
+        
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          right: 10px;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          text-align: left;
+          z-index: 1;
+          font-family:'Alexandria';
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ddd;}
+        
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {display:block;}
+
+        @media screen and (max-width: 600px) {
+            .card {
+                width: 40%;
+            }
+
+            .card img {
+                height: 30vw;
+                width: 10vh;
+            }
+
+            .actualbutton {
+                font-size: 1vh;
+                padding-top: 1vh;
+                padding-bottom:1vh;
+            }
+
+            .card .mybutton {
+                width: 75%;
+                font-size: 1.5vh;
+                margin-top:0px;
+                margin-bottom:0px;
+            }
+            
+            .card .buynow {
+                height:60%;   
+            }
+
+            h1 {
+                font-size: 2vh;
+            }
+
+            .price {
+                font-size: 1.5vh;
+            }
+            
+            .dropbtn {
+                background-color: rgb(199, 70, 199);
+                color: white;
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                border-radius:25px;
+            }
+            
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4G4CJ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="banner">
+        <img class="bannerpic" src="/pics/flowerbanner2.jpg">
+        <div>CRAFTUITY</div>
+        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="/pics/32x32.jpg"></a>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="home">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Filter</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#" onClick="filter('')">All</a>
+        <a href="#" onClick="filter('Keycap')">Keycaps</a>
+        <a href="#" onClick="filter('Keychain')">Keychains</a>
+        <a href="#" onClick="filter('Tray')">Trinket Trays</a>
+        <a href="#" onClick="filter('Rock')">The Rock</a>
+        <a href="#" onClick="filter('Plush')">Plushies</a>
+        <a href="#" onClick="filter('Drink')">Drinktuity</a>
+        <a href="#" onClick="filter('Tote')">Totes</a>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="column" id="column">
+            <div class="card">
+                <img src="/pics/ghost.jpg" alt="Glen the Ghost" style="width:100%;">
+                <a href="ghost.html"><input type=button class="buynow"></a>
+                <h1 id="Plush">Glen the Ghost</h1>
+                <p class="price">$40</p>
+                <p><button class="mybutton" id="glentheghost" onclick="addToCart('Glen the Ghost', '40', '1', id, '/pics/ghost.jpg')">Add
+                        to Cart</button></p>
+                <p><a href="https://buy.stripe.com/bIY7tX1C6bG4fgk001"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/pumpkincat.jpg" alt="Pumpkin Pie Kitty" style="width:100%;">
+                <a href="pumpkincat.html"><input type=button class="buynow"></a>
+                <h1 id="Plush">Pumpkin Pie Kitty</h1>
+                <p class="price">$45</p>
+                <p><button class="mybutton" id="pcat" onclick="addToCart('Pumpkin Cat', '45', '1', id, '/pics/pumpkincat.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/14kcOhcgKfWkgko3ce"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/drinktuity.jpg" alt="Drinktuity" style="width:100%;">
+                <a href="drinktuity.html"><input type=button class="buynow"></a>
+                <h1 id="Drink">Drinktuity</h1>
+                <p class="price">$135</p>
+                <p><button class="mybutton" id="drink" onclick="addToCart('Drinktuity', '135', '1', id, '/pics/drinktuity.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/5kAdSl80udOc5FK147"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/crochetfish1.jpg" alt="Fish Plushie" style="width:100%;">
+                <a href="crochetfish.html"><input type=button class="buynow"></a>
+                <h1 id="Plush">Goldfish Plush</h1>
+                <p class="price">$20</p>
+                <p><button class="mybutton" id="cfish" onclick="addToCart('Goldfish Plush', '20', '1', id, '/pics/crochetfish1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/14kbKd3KefWkc486p9"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/Tic_Tac_Toe.jpg" alt="Drink Tac Toe" style="width:100%;">
+                <a href="drinktactoe.html"><input type=button class="buynow"></a>
+                <h1 id="Drink">Drink Tac Toe</h1>
+                <p class="price">$50</p>
+                <p><button class="mybutton" id="ttt" onclick="addToCart('Drink Tac Toe', '50', '1', id, '/pics/Tic_Tac_Toe.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/aEU7tX80u8tS2ty9Bh"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/turkey2.jpg" alt="Turkey Napkin Holder" style="width:100%;">
+                <a href="napkin.html"><input type=button class="buynow"></a>
+                <h1 id="Resin">Turkey Napkin Holder</h1>
+                <p class="price">$10</p>
+                <p><button class="mybutton" id="tnh" onclick="addToCart('Napkin Holder', '10', '1', id, '/pics/turkey2.jpg')">Add to
+                        Cart</button></p>
+                <p><a href=""><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <!--<div class="card">
+                <img src="kawaiipot.jpg" alt="Kawaii Pot" style="width:100%;">
+                <a href="kawaiipot.html"><input type=button class="buynow"></a>
+                <h1 id="Resin">Kawaii Pot W/ Plant</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="potp" onclick="addToCart('Kawaii Pot W/ Plant', '15', '1', id, 'kawaiipot.jpg')">Add To Cart</button></p>
+                <p><a href="https://buy.stripe.com/eVacOhbcGaC05FK28Q"><input type=button value="Buy Now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>-->
+            <div class="card">
+                <img src="/pics/kawaiipot.jpg" alt="Kawaii Pot" style="width:100%;">
+                <a href="#"><input type=button class="buynow"></a>
+                <h1 id="Resin">Kawaii Pot W/O Plant</h1>
+                <p class="price">$12</p>
+                <p><button class="mybutton" id="potp" onclick="addToCart('Kawaii Pot W/O Plant', '12', '1', id, '/pics/kawaiipot.jpg')">Add To Cart</button></p>
+                <p><a href="https://buy.stripe.com/fZe4hL94yh0ofgk6p7"><input type=button value="Buy Now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/mushroomguy.jpg" alt="Mushroom Guy" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Mushroom Guy</h1>
+                <p class="price">$40</p>
+                <p><button class="mybutton" id="bcactus" onclick="addToCart('Mushroom Guy', '40', '1', id, '/pics/mushroomguy.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/eVa15zdkO8tS9W028O"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/pigsticker1.jpg" alt="Pig Sticker" style="width:100%;">
+                <a href="#"><input type=button class="buynow"></a>
+                <h1 id="Misc">Pig Sticker</h1>
+                <p class="price">$3</p>
+                <p><button class="mybutton" id="pigst" onclick="addToCart('Pig Sticker', '3', '1', id, '/pics/pigsticker1.jpg')">Add To Cart</button></p>
+                <p><a href=""><input type=button value="Buy Now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/frogtrinket.jpg" alt="Frog trinket tray" style="width:100%;">
+                <a href="frogtrinkettray.html"><input type=button class="buynow"></a>
+                <h1 id="Tray">Frog Trinket Tray</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="frogt" onclick="addToCart('Frog Trinket Tray', '15', '1', id, '/pics/frogtrinket.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/aEU9C56Wqh0ofgkeUZ"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/chameleon2.jpg" alt="Chameleon" style="width:100%;">
+                <a href="chameleon.html"><input type=button class="buynow"></a>
+                <h1 id="Plush">Chameleon</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="cham" onclick="addToCart('Chameleon', '15', '1', id, '/pics/chameleon2.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/5kA01vgx0h0ob045l6"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/miniwhale.jpg" alt="Mini Whale" style="width:100%;">
+                <a href="smallwhale.html"><input type=button class="buynow"></a>
+                <h1 id="Plush">Small Whale</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="mwhale" onclick="addToCart('Mini Whale', '15', '1', id, '/pics/miniwhale.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/28o5lPdkOaC02ty8wC"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/tulip.jpg" alt="Tulip Plush" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Tulip Plush</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="tulip" onclick="addToCart('Tulip Plush', '15', '1', id, '/pics/tulip.jpg')">Add to
+                        Cart</button></p>
+                <p><a href=""><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/blackbear1.jpg" alt="Black Bear Plush" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Black Bear Plush</h1>
+                <p class="price">$50</p>
+                <p><button class="mybutton" id="bbear" onclick="addToCart('Black Bear Plush', '50', '1', id, '/pics/blackbear1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href=""><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/rock_opener.JPG" alt="Rock Opener" style="width:100%;">
+                <a href="rockbottle.html"><input type=button class="buynow"></a>
+                <h1 id="Rock">The Rock Bottle Opener</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="rockop" onclick="addToCart('The Rock Opener', '15', '1', id, '/pics/rock_opener.JPG')">Add to
+                        Cart</button></p>
+                <p><a href=""><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/3pigs.jpg" alt="3 Mini Pigs" style="width:100%;">
+                <a href="micropig.html"><input type=button class="buynow"></a>
+                <h1 id="Plush">Micro Pig</h1>
+                <p class="price">$7</p>
+                <p><button class="mybutton" id="mpig" onclick="addToCart('Mini Pig', '7', '1', id, '/pics/3pigs.jpg')">Add to Cart</button>
+                </p>
+                <p><a href="https://buy.stripe.com/28obKdbcG6lKc48fZ5"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/pumpkinbear.jpg" alt="Pumpkin Bear" style="width:100%;">
+                <a href="pumpkinbear.html"><input type=button class="buynow"></a>
+                <h1 id="Plush">Pumpkin Bear</h1>
+                <p class="price">$35</p>
+                <p><button class="mybutton" id="pbear" onclick="addToCart('Pumpkin Bear', '35', '1', id, '/pics/pumpkinbear.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/9AQdSl5SmcK89W0aEM"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+
+            <div class="card">
+                <img src="/pics/flowerbag.jpg" alt="Flower Tote Bag" style="width:100%;">
+                <a href="flowerbag.html"><input type=button class="buynow"></a>
+                <h1 id="Tote">Flower Tote</h1>
+                <p class="price">$20</p>
+                <p><button class="mybutton" id="flowert" onclick="addToCart('Flower Tote', '20', '1', id, '/pics/flowerbag.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/eVa9C580u6lKc48eV3"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/bee1.jpg" alt="Bee Keycap" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keycap">Bee Keycap</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="beekc" onclick="addToCart('Bee Keycap', '15', '1', id, '/pics/bee1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/00gaG94OiaC05FKcNh"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/rockcala1.jpg" alt="Rock-Cala" style="width:100%;">
+                <a href="rockcala.html"><input type=button class="buynow"></a>
+                <h1 id="Rock">Rock-Cala</h1>
+                <p class="price">$25</p>
+                <p><button class="mybutton" id="rockcala" onclick="addToCart('Rock-Cala', '25', '1', id, '/pics/rockcala1.jpg')">Add to Cart</button>
+                </p>
+                <p><a href="https://buy.stripe.com/7sI29DcgKbG47NS14f"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/flowers1.jpg" alt="Flower Keycap" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keycap">Flower Keycap</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="flowerkc" onclick="addToCart('Flower Keycap', '15', '1', id, '/pics/flowers1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/9AQbKd80u8tSd8c3cG"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+
+            <div class="card">
+                <img src="/pics/hearts1.jpg" alt="Hearts Keycap" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keycap">Hearts Keycap</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="heartskc" onclick="addToCart('Hearts Keycap', '15', '1', id, '/pics/hearts1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/fZe29Dgx0eSgecgdRi"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+            
+            <div class="card">
+                <img src="/pics/octo1.jpg" alt="Octopus Plush" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Octopus Plush</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="octo" onclick="addToCart('Octopus Plush', '15', '1', id, '/pics/octo1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href=""><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/smallpig2.jpg" alt="Small Pig" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Small Pig</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="smallpig" onclick="addToCart('Small Pig', '15', '1', id, '/pics/smallpig2.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/00g29DbcGeSg6JOaF7"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/fish1.jpg" alt="Rock-Cala" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keycap">Fish Keycap</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="fishkc" onclick="addToCart('Fish Keycap', '15', '1', id, '/pics/fish1.jpg')">Add to Cart</button>
+                </p>
+                <p><a href="https://buy.stripe.com/14kg0tdkO6lK9W04gH"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/frogkc.jpg" alt="Frog Keycap" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keycap">Frog Keycap</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="frogkc" onclick="addToCart('Frog Keycap', '15', '1', id, '/pics/frogkc.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/5kA4hL0y2dOc9W08wW"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/piekeychain.jpg" alt="Pie Keychain" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keychain">Pie Keychain</h1>
+                <p class="price">$10</p>
+                <p><button class="mybutton" id="piekc" onclick="addToCart('Pie Keychain', '10', '1', id, '/pics/piekeychain.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/14kdSl80u11q3xCcN5"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/rocks1.jpg" alt="Rock Keychain" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keychain">Rock Guy Keychain</h1>
+                <p class="price">$10</p>
+                <p><button class="mybutton" id="rockkc" onclick="addToCart('Rock Keychain', '10', '1', id, '/pics/rocks1.jpg')">Add to Cart</button>
+                </p>
+                <p><a href="https://buy.stripe.com/5kAcOh4OibG43xC3cw"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/moonkc2.jpg" alt="Moon Keycap" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keycap">Moon Keycap</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="moonkc" onclick="addToCart('Moon Keycap', '15', '1', id, '/pics/moonkc2.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/aEUbKdcgKeSggko28x"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+
+            <div class="card">
+                <img src="/pics/chick.jpg" alt="Little Chick" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Little Chick</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="lilchick" onclick="addToCart('Little Chick', '15', '1', id, '/pics/chick.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/4gw3dHgx09xW1puaEZ"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/smileflower.jpg" alt="Flower Plush" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Flower Plush</h1>
+                <p class="price">$10</p>
+                <p><button class="mybutton" id="lilflower" onclick="addToCart('Flower Plush', '10', '1', id, '/pics/smileflower.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/cN29C5gx0dOcc48eVh"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/bobacat.jpg" alt="Boba Cat" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Boba Cat</h1>
+                <p class="price">$30</p>
+                <p><button class="mybutton" id="bobacat" onclick="addToCart('Boba Cat', '30', '1', id, '/pics/bobacat.jpg')">Add to Cart</button>
+                </p>
+                <p><a href="https://buy.stripe.com/bIYeWpdkO8tSgko8wS"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+
+            <div class="card">
+                <img src="/pics/shroomkc1.jpg" alt="Mushroom Keycap" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Keycap">Mushroom Keycap</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="shroomkc" onclick="addToCart('Mushroom Keycap', '15', '1', id, '/pics/shroomkc1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/bIYeWp94yaC0fgk9B6"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/gyoza.jpg" alt="Mini Dumpling" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Mini Dumpling</h1>
+                <p class="price">$5</p>
+                <p><button class="mybutton" id="gyoza" onclick="addToCart('Mini Dumpling', '5', '1', id, '/pics/gyoza.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/aEU9C55SmbG4gkofZv"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/pigstands.jpg" alt="Pig Phone Stand" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Misc">Pig Phone Stand</h1>
+                <p class="price">$7</p>
+                <p><button class="mybutton" id="pigps" onclick="addToCart('Pig Phone Stand', '7', '1', id, '/pics/pigstands.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/bIYeWp94yaC0fgk9B6"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/shroomsticker.jpg" alt="Mushroom Guy Sticker" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Misc">Mushroom Guy Sticker</h1>
+                <p class="price">$3</p>
+                <p><button class="mybutton" id="shroomsticker" onclick="addToCart('Mushroom Sticker', '3', '1', id, '/pics/shroomsticker.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/bIYeWp94yaC0fgk9B6"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+
+            <div class="card">
+                <img src="/pics/bigwhale1.jpg" alt="Big Whale" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Big Whale</h1>
+                <p class="price">$25</p>
+                <p><button class="mybutton" id="bigwhale" onclick="addToCart('Big Whale', '25', '1', id, '/pics/bigwhale1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/4gweWp80uaC06JOcNk"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/bao1.jpg" alt="Bao" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Bao</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="bao" onclick="addToCart('Bao', '15', '1', id, '/pics/bao1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/3cs3dH80u11q2ty3cN"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/dumpling1.jpg" alt="Dumpling" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Dumpling</h1>
+                <p class="price">$15</p>
+                <p><button class="mybutton" id="dumplin" onclick="addToCart('Dumpling', '15', '1', id, '/pics/dumpling1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/bIYcOha8CfWk6JO28K"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/bun1.jpg" alt="Bunny" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Bunny in Dress</h1>
+                <p class="price">$30</p>
+                <p><button class="mybutton" id="bun" onclick="addToCart('Bunny in Dress', '30', '1', id, '/pics/bun1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/14k3dH6Wq7pOfgk14D"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+
+            <div class="card">
+                <img src="/pics/bluebird1.jpg" alt="Blue Bird" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Blue Parakeet</h1>
+                <p class="price">$25</p>
+                <p><button class="mybutton" id="bluebird" onclick="addToCart('Blue Parakeet', '25', '1', id, '/pics/bluebird1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/cN2aG9bcG9xW7NSeVu"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/greenbird1.jpg" alt="Green Bird" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Green Parakeet</h1>
+                <p class="price">$25</p>
+                <p><button class="mybutton" id="gbird" onclick="addToCart('Green Parakeet', '25', '1', id, '/pics/greenbird1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/cN2aG9bcG9xW7NSeVu"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/smallcactus1.jpg" alt="Small Cactus" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Short Cactus </h1>
+                <p class="price">$10</p>
+                <p><button class="mybutton" id="scactus" onclick="addToCart('Short Cactus', '10', '1', id, '/pics/smallcactus1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/28o01v3Ke4dCgko6p2"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/bigcactus1.jpg" alt="Big Cactus" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Plush">Tall Cactus</h1>
+                <p class="price">$12</p>
+                <p><button class="mybutton" id="bcactus" onclick="addToCart('Tall Cactus', '12', '1', id, '/pics/bigcactus1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/14kcOh80u25ugko28N"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+
+            <div class="card">
+                <img src="/pics/valley1.jpg" alt="Lily of the Valley" style="width:100%;">
+                <a href=""><input type=button class="buynow"></a>
+                <h1 id="Misc">Lily of the Valley</h1>
+                <p class="price">$7</p>
+                <p><button class="mybutton" id="bluebird" onclick="addToCart('Lily of the Valley', '7', '1', id, '/pics/valley1.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/6oE7tXcgK25ub04cNp"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+
+            <div class="card">
+                <img src="/pics/mushroombag.jpg" alt="Mushroom Bag" style="width:100%;">
+                <a href="mushtote.html"><input type=button class="buynow"></a>
+                <h1 id="Tote">Mushroom Tote</h1>
+                <p class="price">$20</p>
+                <p><button class="mybutton" id="mushtote" onclick="addToCart('Mushroom Tote Bag', '20', '1', id, '/pics/mushroombag.jpg')">Add to
+                        Cart</button></p>
+                <p><a href="https://buy.stripe.com/fZe4hLfsW11qd8c6os"><input type=button value="Buy now" class="mybutton" style="background-color:#8716d9"></a></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <br>
+        <div style="padding-left:5px;">
+            craftuitycrafts@gmail.com
+        </div>
+        <div style="padding-left:5px;">
+            instagram: @Craftuity
+        </div>
+    </div>
+    
+
+    <script>
+        filter('');
+        updateCart();
+        function updateCart(){
+            var cartitemnumber = document.getElementById("cartnumber");
+            var sessionnum = 0;
+            if (sessionStorage.getItem('cart-item-number') && Number(sessionStorage.getItem('cart-item-number')) != 0){
+                sessionnum = sessionStorage.getItem('cart-item-number');
+                cartitemnumber.textContent = sessionnum;
+                cartitemnumber.style.opacity = 1;
+            }
+            else{
+                cartitemnumber.textContent = 0;
+                cartitemnumber.style.opacity = 0;
+            }
+        }
+    
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        
+        function filter(myfilter){
+            var column = document.getElementById("column");
+            var item = column.getElementsByTagName("div");
+            var name;
+            for (i = 0; i < item.length; i++){
+                name = item[i].getElementsByTagName("h1")[0];
+                if (name){
+                    if (name.id == myfilter || myfilter == ''){
+                        item[i].style.display = "";
+                    }
+                    else{
+                        item[i].style.display = "none";
+                    }
+                }
+                if (name.textContent.length > 18 && window.innerWidth <= 600){
+                    console.log(name.textContent.length);
+                    name.style.fontSize = "1.5vh";
+                    name.style.marginTop = "1.9vh";
+                }
+            }
+        }
+
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+
+
+        function addToCart(name, price, quantity, id, image) {
+            btn = document.getElementById(id);
+            var number = Number(document.getElementById('cartnumber').textContent);
+            
+
+            var cartItem = {
+                name: name,
+                price: price,
+                quantity: quantity,
+                image: image
+            };
+            var cartItemJSON = JSON.stringify(cartItem);
+
+            var cartArray = new Array();
+            // If javascript shopping cart session is not empty
+            if (sessionStorage.getItem('shopping-cart')) {
+                cartArray = JSON.parse(sessionStorage.getItem('shopping-cart'));
+            }
+            cartArray.push(cartItemJSON);
+
+            var cartJSON = JSON.stringify(cartArray);
+            sessionStorage.setItem('shopping-cart', cartJSON);
+            number += 1;
+            sessionStorage.setItem('cart-item-number', number);
+            updateCart();
+
+            btn.textContent = "Added to Cart!"
+            setTimeout(changeBack, 2000, id)
+        }
+
+        function changeBack(id) {
+            btn.textContent = "Add to Cart";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4G4CJ7');</script>
+<!-- End Google Tag Manager -->
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        p{
+            font-size: 1vw;
+            margin: auto;
+            margin-top:15px;
+            margin-bottom:350px;
+            width:90%;
+            text-align: center;
+            color: rgb(111, 9, 158);
+            font-family:'Alexandria';
+        }
+        
+        .us {
+            margin:auto;
+            text-align:center;
+        }
+        
+        .us img{
+            height:20vw;
+            width:20vw;
+            object-fit: cover;
+            margin:auto;
+        }
+        
+        @media screen and (max-width: 600px) {
+            p{
+                font-size: 2vh;
+            }
+            .us img{
+                height:20vh;
+                width:20vh;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4G4CJ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <div class="banner" id="banner">
+        <img class="bannerpic" src="/pics/flowerbanner2.jpg">
+        <div>CRAFTUITY</div>
+        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="32x32.jpg"></a>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html" class="active">About</a>
+    </div>
+    <div class="us">
+        <img src="/pics/chris.jpg">
+        <img src="/pics/kyrsten.jpg">
+    </div>
+    <p>
+        Welcome to Craftuity!<br>We are a Panamanian brother and sister creative duo based in New Hampshire. Our names are Kyrsten and Chris :)<br>If you'd like to follow our journey please feel free to follow us on our socials! We are @Craftuity on Instagram and TikTok!
+    </p>
+    <script>
+        updateCart();
+        function updateCart(){
+            var cartitemnumber = document.getElementById("cartnumber");
+            var sessionnum = 0;
+            if (sessionStorage.getItem('cart-item-number') && Number(sessionStorage.getItem('cart-item-number')) != 0){
+                sessionnum = sessionStorage.getItem('cart-item-number');
+                cartitemnumber.textContent = sessionnum;
+                cartitemnumber.style.opacity = 1;
+            }
+            else{
+                cartitemnumber.textContent = 0;
+                cartitemnumber.style.opacity = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

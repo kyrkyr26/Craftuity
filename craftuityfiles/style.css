@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Just Another Hand');
+@import url('https://fonts.googleapis.com/css?family=Alexandria');
+
+/* Add a black background color to the top navigation */
+body {
+    overflow-y: scroll;
+    width: 100%;
+    margin:auto;
+    background-color:rgb(228, 205, 250); /*rgb(217, 228, 217);*/
+}
+
+.topnav {
+    text-align: center;
+    overflow: visible;
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom:10px;
+    border: 3px solid white;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    color: #675769;
+    text-align: center;
+    height: auto;
+    /*padding: 14px 15px;*/
+    padding: 1.5vw;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-family: 'Just Another Hand';
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: rgb(111, 9, 158);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background: none;
+    color: rgb(199, 70, 199);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+.cartnumber {
+    height: 1vw;
+    width: 1vw;
+    color:white;
+    font-size:0.8vw;
+    font-family:'Alexandria';
+    background-color: rgb(199, 70, 199);
+    position:absolute;
+    border-radius: 50%;
+    display: inline-block;
+    opacity:0;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    height: 10vw;
+}
+
+.bannerpic {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+    /*-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));*/
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(224,224,224,0.8)), color-stop(70%, rgba(224,224,224,0.8)), color-stop(100%, rgba(255,255,255,0)));
+}
+        
+.banner div {
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family:"Just Another Hand", Helvetica, sans-serif;
+    font-size:6vw; 
+    -webkit-text-stroke-width: 4px; 
+    -webkit-text-stroke-color: black;
+    transform: translate(-50%, -50%);
+}
+        
+.footer {
+    background-color: rgb(199, 83, 180);
+    position:relative;
+    bottom:0;
+    width:100%;
+    height: 100px;
+    margin-top:20px;
+    color:white;
+    font-family:"Alexandria", Helvetica, sans-serif;
+}
+
+
+.cart {
+    position: fixed;
+    top: 1vw;
+    right: 1vw;
+    border: none;
+    outline: 0;
+    z-index: 1;
+    padding: 0.3vw;
+    text-align: center;
+    cursor: pointer;
+    font-size: small;
+    opacity: 0.6;
+    height: 2vw;
+    width: 2vw;
+}
+
+.cart img
+{
+    height: 3vw;
+    width: 3vw;
+}
+
+@media screen and (max-width: 800px) {
+    .cart {
+        width: 4vh;
+        height: 4vh;
+        top: 0.5vh;
+        right: 2vh;
+    }
+
+    .cart img {
+        height: 4vh;
+        width: 4vh;
+    }
+
+    .banner {
+        height: 6vh;
+        font-size: 5vh;
+        width: 100%;
+    }
+    
+    .cartnumber{
+        height: 1.5vh;
+        width: 1.5vh;
+        font-size:1vh;
+    }
+    
+    .banner div {
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family:"Just Another Hand", Helvetica, sans-serif;
+    font-size:4vh; 
+    -webkit-text-stroke-width: 0.5px; 
+    -webkit-text-stroke-color: black;
+    transform: translate(-50%, -50%);
+    }
+    .topnav {
+        max-width:100%;
+    }
+    .topnav a {
+        font-size: 3vh;
+        padding: 1.5vh;
+    }
+    
+    .footer {
+    background-color: rgb(199, 83, 180);
+        height: 70px;
+    }
+}
+
