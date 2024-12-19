@@ -282,15 +282,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- End Google Tag Manager (noscript) -->
     <div class="banner" id="banner">
         <img class="bannerpic" src="/pics/flowerbanner2.jpg">
-        <div>CRAFTUITY</div>
-        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="/pics/32x32.jpg"></a>
-    </div>
-
-    <div class="topnav" id="myTopnav">
+        <div class="bannerdiv">CRAFTUITY</div>
+        <div class="topnav" id="myTopnav">
         <a href="home.html">Home</a>
-        <a href="shop.html">Shop</a>
+        <a href="shop.html" class="active">Shop</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
+    </div>
+        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="/pics/32x32.jpg"></a>
     </div>
     
     <div style="text-align:center; margin: auto;">
@@ -326,7 +325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </div>
 
-    <section id="container" style="background-color:rgb(228, 205, 250)">
+    <section id="container" style="background-color:white">
         <div id="panel" class="product">
             <div class="description">
                 <form id="checkout_form" action="/checkoutpage" method="POST">
@@ -380,10 +379,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             if (sessionStorage.getItem('shopping-cart')) {
                 var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
                 itemCount = shoppingCart.length;
-                console.log(itemCount);
+                var uniqueItems = new Map();
+                
+                shoppingCart.forEach(function (item, index) {
+                    var cartItem = JSON.parse(item);
+                    name = cartItem.name;
+                    image = cartItem.image;
+
+                    let quant = parseInt(cartItem.quantity);
+                    let p = cartItem.price;
+                    price = parseInt(p);
+                    if (uniqueItems.get(name) == null)
+                    {
+                        uniqueItems.set(name, {quant, price, image});
+                    }
+                    else
+                    {
+                        var q = uniqueItems.get(name);
+                        quantity = parseInt(q.quant);
+                        quantity++;
+                        quant = quantity;
+                        price = parseInt(p) * quantity;
+                        uniqueItems.set(name, {quant, price, image});
+                    }
+                });
 
                 //Iterate javascript shopping cart array
-                shoppingCart.forEach(function (item, index) {
+                /*shoppingCart.forEach(function (item, index) {
                     var cartItem = JSON.parse(item);
                     name = cartItem.name;
                     image = cartItem.name;
@@ -414,8 +436,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         "</tr>";
 
                     grandTotal += subTotal;
+                    
+                });*/
+                
+                let uniques = uniqueItems.keys();
+                
+                const uniquesArr = Array.from(uniques);
+
+                //Iterate javascript shopping cart array
+                uniquesArr.forEach(function (item, index) {
+                    image = uniqueItems.get(item).image;
+                    
+                    if (index == 0) {
+                        allItems += item;
+                    }
+                    else {
+                        allItems += (", " + item);
+                    }
+
+                    price = uniqueItems.get(item).price;
+                    if (index == 0){
+                        allPrices += price.toString();
+                    }
+                    else{
+                        allPrices+= (", " + price.toString());
+                    }
+                    quantity = uniqueItems.get(item).quant;
+                    console.log(item, image, price, quantity);
+                    unitPrice = price/quantity;
+
+                    cartRowHTML += "<tr>" +
+                        "<td class='items' style='display:flex;align-items:center;'><div><img src=" + image +
+                        "></div><div style='width=100%;padding-left:10px'>" + item + "</div></td>" +
+                        "<td class='items'>$" + unitPrice.toFixed(2) + "</td>" +
+                        "<td class='items'>" + quantity + "</td>" +
+                        "<td class='items'>$" + price.toFixed(2) + "</td>" +
+                        "</tr>";
+
+                    grandTotal += price;
 
                 });
+
             }
 
             $('#cartTableBody').html(cartRowHTML);

@@ -6,7 +6,7 @@ body {
     overflow-y: scroll;
     width: 100%;
     margin:auto;
-    background-color:rgb(228, 205, 250); /*rgb(217, 228, 217);*/
+    background-color:white; /*rgb(217, 228, 217);*/
 }
 
 .topnav {
@@ -15,9 +15,9 @@ body {
     display: flex;
     width: fit-content;
     margin: auto;
-    margin-top: 15px;
+    /*margin-top: 15px;
     margin-bottom:10px;
-    border: 3px solid white;
+    border: 3px solid white;*/
 }
 
 /* Style the links inside the navigation bar */
@@ -25,25 +25,25 @@ body {
     display: flex;
     margin: auto;
     width: fit-content;
-    color: #675769;
+    color: #f2d8ef;
     text-align: center;
     height: auto;
     /*padding: 14px 15px;*/
-    padding: 1.5vw;
+    padding-right: 2.2vw;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-family: 'Just Another Hand';
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    color: rgb(111, 9, 158);
+    color: #cfbccd;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
     background: none;
-    color: rgb(199, 70, 199);
+    color: #e398da;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -67,7 +67,7 @@ body {
 .banner {
     position: relative;
     text-align: center;
-    height: 10vw;
+    height: 3vw;
 }
 
 .bannerpic {
@@ -80,20 +80,27 @@ body {
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(224,224,224,0.8)), color-stop(70%, rgba(224,224,224,0.8)), color-stop(100%, rgba(255,255,255,0)));
 }
         
-.banner div {
+.bannerdiv {
     color:white;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 8%;
     font-family:"Just Another Hand", Helvetica, sans-serif;
-    font-size:6vw; 
-    -webkit-text-stroke-width: 4px; 
-    -webkit-text-stroke-color: black;
+    font-size:3vw; 
+    -webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: #914a90;
     transform: translate(-50%, -50%);
 }
+
+.banner .topnav {
+    position: absolute;
+    top: 1%;
+    left: 41%;
+}
+
         
 .footer {
-    background-color: rgb(199, 83, 180);
+    background-color: #cfb2ce;
     position:relative;
     bottom:0;
     width:100%;
@@ -126,6 +133,9 @@ body {
     width: 3vw;
 }
 
+@media screen and (min-width: 2000px) {
+}
+
 @media screen and (max-width: 800px) {
     .cart {
         width: 4vh;
@@ -151,11 +161,11 @@ body {
         font-size:1vh;
     }
     
-    .banner div {
+    .bannerdiv {
     color:white;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 15%;
     font-family:"Just Another Hand", Helvetica, sans-serif;
     font-size:4vh; 
     -webkit-text-stroke-width: 0.5px; 
@@ -170,8 +180,14 @@ body {
         padding: 1.5vh;
     }
     
+    .banner .topnav {
+        position: absolute;
+        top: 1%;
+        left: 30%;
+}
+    
     .footer {
-    background-color: rgb(199, 83, 180);
+        background-color: #cfb2ce;
         height: 70px;
     }
 }

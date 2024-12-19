@@ -40,9 +40,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div class="banner" id="banner">
-        <img class="bannerpic" src="flowerbanner2.jpg">
-        <div>CRAFTUITY</div>
-        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="32x32.jpg"></a>
+        <img class="bannerpic" src="/pics/flowerbanner2.jpg">
+        <div class="bannerdiv">CRAFTUITY</div>
+        <div class="topnav" id="myTopnav">
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="about.html">About</a>
+    </div>
+        <a class="cart" href="cart.html"><span class="cartnumber" id="cartnumber">0</span><img src="/pics/32x32.jpg"></a>
     </div>
 
     <div class="topnav" id="myTopnav">
@@ -57,10 +63,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php
 
 $name = $_POST['firstname'];
-$textinput = $_POST['subject'];
+$subject = $_POST['subject'];
 $youremail = $_POST['youremail'];
 
-$textinput = $textinput . "\nfrom: " . $youremail;
+$textinput = $subject . "\nfrom: " . $youremail;
 
 // use wordwrap() if lines are longer than 70 characters
 $msg = wordwrap($msg,70);
@@ -68,7 +74,10 @@ $msg = wordwrap($msg,70);
 $headers = "From: contact@craftuity.com";
 
 // send email
-mail("craftuitycrafts@gmail.com","new message from $name",$textinput,$headers);
+if ($textinput !== '' && $name != "Search Engine Index" && $name != '' && !str_contains($textinput, 'https'))
+{
+    mail("craftuitycrafts@gmail.com","new message from $name",$textinput,$headers);
+}
 ?>
 </p>
 </body>
